@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Hello</h1>
+		<input type="button" value="submit" onclick="getFormValue()"/>
+	<P id="display"></P>
+	<form>
+		First name: <input type="text" id="fname"/><br>
+		last name: <input type="text" id="lname"/><br>
+
+	<script>
+		
+function getFormValue(){
+	var fname = document.getElementById("fname").value;
+	var lname = document.getElementById("lname").value;
+	document.getElementById("display").innerHTML = "Hello" + fname + lname;
+
+}
+
+
+
+
+	</script>
+		
+
+
+
+	</form>
+</body>
+</html>
