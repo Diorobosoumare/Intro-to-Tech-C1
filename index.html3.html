@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h3 id="display"></h3>
+
+	<input type="text"  id="box" placeholder="Enter Name">
+	<input type="button" Value="Display Formatted Name"onclick="capName()">
+
+
+	<p>
+
+	When button is clicked name should be displayed with Capital First letter and Lower case for the rest of the latters</p>
+
+		Create onclick (event listener) for buton
+
+		Get value from textbox 
+		give textbox an id 
+		us document.getElementById().value to get its value
+
+		Get First Letter of value captalize it 
+
+		Get all Letter after the first Letter Lowercase it 
+
+		Displqay result on to h3
+			give it and id
+			use document.getElementById().innerHTML
+
+			<hr>
+			<h1>Arry Things</h1>
+			<h3 id="view"></h3>
+			<input id="entery" type="text">
+			<input type="text" value="Add to Array" onclick="AddElement()">
+			<input type="button" value="remouve from Array" onclick="remouveElement()">
+
+						<p>
+			When button is cliced, add new elements to arry and display the elements on the screen
+
+			add the onclick to the button
+
+			creat array 
+
+			get value from textbox
+			Add value to array
+
+			Display element of the arry
+				</p>
+
+
+
+				
+					<hr>
+					<h1>Fibonacci Numbers </h1>
+					<h3 id="sequence"></h3>
+					<input type="button" value="Next Number" onclick="showFib()">
+					<p>
+						To find Add text number is senquence add the last two numbers to the senquence 
+						0, 1
+						0, 1, 1
+						0, 1, 1,2
+						0, 1, 1,2,3
+						0, 1, 1,2,3,5
+						0, 1, 1,2,3,5,8
+						When button is clicked,
+						Calculate next number in sequence 
+							add last two numbers in array
+							last # = fib[fib.length-1]
+							2nd last  # = fib[fib.length-2]
+							add together to get next 
+						add that number to end of array
+						use push
+						display element of array
+						get h3 id 
+						use document......................................................innerHTML
+						fib.join
+
+					</p>
+				
+
+			<script>
+
+				var fib = [0, 1];
+
+				function showFib(){
+
+					var next = fib[fib.length-1] + fib[fib.length-2];
+					fib.push(next);
+					document.getElementById("sequence").innerHTML  += fib.join(" , ") + "<br>";
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+
+
+
+
+				var pets = [];
+				
+			function AddElement(){
+				var value = document.getElementById("entery").value;
+				pets.push(value);
+				document.getElementById("view").innerHTML = pets.join(" | ") + '<br> the  total amount of pets I have is ' + pets.length;
+}
+					function remouveElement(){
+					var value = document.getElementById("entery").value;
+					pets.shift();
+					document.getElementById("view").innerHTML = pets.join(" | ") + '<br> the  total amount of pets I have is ' + pets.length;
+
+				}
+
+
+			</script>
+
+		</p> 
+
+
+		<script>
+			function capName() {
+				var value = document.getElementById("box").value;
+				
+				var result = value[0].toUpperCase() + value.substr(1).toLowerCase();
+
+				document.getElementById("display").innerHTML = result;
+
+				
+			}
+		</script>
+
+</body>
+</html>
