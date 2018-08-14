@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Good day</h1>
+
+	<input type="button" value="click Me" onclick="bClicks()">
+	<h1 id="display"></h1>
+
+	<h1 onmouseover="hov()"id="colChange" onmouseout="mouseOut()">Come Closer</h1>
+	<input id="num" type="number" placeholder="Enter a #" onchange="showCubed()">
+	
+
+
+	<script>
+		function showCubed(){
+			var input =document.getElementById("num").value;
+			 document.getElementById("display").innerHTML =
+			input * input * input; 
+		}
+			
+		function  hov(){
+			document.getElementById("colChange").innerHTML = "GET BACK!!!!!1111";
+			document.getElementById("colChange").style.color ="red";
+
+		}
+			
+		
+		function mouseOut(){
+			document.getElementById("colChange").innerHTML = "come Closer";
+			document.getElementById("colChange").style.color ="black";
+		}
+		
+
+		function bClicks(){
+			var count = 0;
+			count ++;
+			console.log("pressed:" + count);
+			document . getElementById("display"). innerHTML = "pressed:" + count;
+		}
+		
+		
+		function greeting(name, age) {
+			console.log('Hello ' + name + "! you are  " + age + "yrs old.");
+		}
+		function cubed(num){
+			return num * num * num;
+		}
+
+		greeting("Trey" , 47);
+		greeting("Bob" , 32);
+		var result = cubed(6);
+
+		console.log("result is: " + result);
+	</script>
+
+
+	<script src=""></script>
+</body>
+</html>
