@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h3 id="display"></h3>
+	<ul id="colors"></ul>
+
+	<script>
+		var count = 1;
+		while (count <= 20){
+			console.log(count);
+			count+=2;
+
+		}
+		var count = 10;
+		while (count >= 1){
+			console.log(count);
+			count--;
+		}
+		console.log("----------------");
+		var count = 1;
+		while(count <= 100){
+			if(count % 2 == 0){
+			console.log(count + 'is even');
+			document.getElementById('display').innerHTML += count + ' is even<br>';
+		}else{
+			console.log(count + 'is add');
+			document.getElementById('display').innerHTML += count + ' is add<br>';
+		
+		}
+
+
+		count++;
+
+
+		}
+		console.log("----------------");
+		var sum = 0;
+		var count = 1;
+		while(count <= 5){
+			sum += count;
+			count++;
+		}
+		console.log('the sum is ' + sum);
+
+
+		var password = prompt('please Enter password');
+
+		var attempts = 0;
+
+		while(password != 'sneeze'){
+			attempts++;
+			if(attempts >= 3){
+				alert('Achoo!!!!!!!');
+			}
+
+			password = prompt('password Incorrect! Tray Again');
+
+		}
+		console.log("----------------");
+		for(var i = 1; i <= 20; i++){
+			console.log(i);
+		}
+		console.log("----------------");
+		var weathers = ['rainy', 'sunny', 'moist', 'humid','awesome'];
+		for(var i = 0; i < weathers.length; i++){
+			console.log('It is ' + weathers[i] + ' outside');
+
+		}
+		
+
+		var color = ['blue', 'red', 'purple', 'violet', 'indigo', 'magenta'];
+
+		for(var i = 0; i < color.length;i++){
+			document.getElementById('colors').innerHTML += '<li style="color: ' +color[i] +'">'+ color[i] +'<li>';
+
+
+		}
+
+	</script>
+
+</body>
+</html>

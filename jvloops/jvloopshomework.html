@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h3 id="display"></h3>
+	<script>
+	console.log("----------------");
+	var count = 1;
+	while(count <= 100){
+		console.log(count)
+		if(count % 3 == 0 && count % 5 == 0){
+			console.log(count + 'is FizzBuzz')
+			document.getElementById("display").innerHTML += count + ' is Fizzbuzz<br>';	
+		} else if(count % 5 == 0) {
+			
+			console.log(count + 'is Buzz')
+			document.getElementById("display").innerHTML += count + ' is Buzz<br>';
+
+		}else if(count % 3 == 0){
+			console.log(count + 'is Fizz')
+
+		} else {
+			console.log('End')
+		}
+
+
+		count++;
+
+		}
+		
+
+
+		
+	
+
+
+	</script>
+
+</body>
+</html>
